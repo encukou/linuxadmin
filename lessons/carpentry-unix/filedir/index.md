@@ -124,7 +124,7 @@ pouze podadresáře.
 
 ## Syntax shellového příkazu
 
-Příkaz níže použijeme jako příklad příkaz, který si rozebereme:
+Příkaz níže použijeme jako příklad příkazu, který si rozebereme:
 
 ```console
 $ ls -F /
