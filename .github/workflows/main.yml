@@ -20,8 +20,8 @@ jobs:
         poetry run python -m naucse_render compile _compiled \
             --edit-repo-url https://github.com/${{ github.repository }} \
             --edit-repo-branch main
-    - if: ${{ github.ref == 'refs/heads/main' }}
-      name: Publish compiled course
+    - name: Publish compiled course
+      if: github.ref == 'refs/heads/main'
       run: |
         git fetch origin compiled
         poetry run python -m ghp_import -m "Compiled" -b compiled --push _compiled/
@@ -30,3 +30,10 @@ jobs:
         GIT_AUTHOR_NAME: ghp_import
         GIT_COMMITTER_NAME: ghp_import
         EMAIL: none@invalid
+    - name: Trigger redeployment
+      if: github.ref == 'refs/heads/main'
+      run: |
+        export REPO_URL=${{ github.server_url }}/${{ github.repository }}
+        curl -X POST -H "Accept: application/json" \
+          https://hooks.nauc.se/trigger \
+          -d '{"repository": "${REPO_URL}", "branch": "compiled"}'
