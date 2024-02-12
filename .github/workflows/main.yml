@@ -23,6 +23,8 @@ jobs:
     - if: ${{ github.ref == 'refs/heads/main' }}
       name: Publish compiled course
       run: |
+        git remote -v
+        git branch -v
         git fetch origin compiled
         poetry run python -m ghp_import -m "Compiled" -b compiled --push _compiled/
       env:
