@@ -1,11 +1,11 @@
 title: Linuxová administrace
-subtitle: "Brno, podzim 2021 – Podpořeno Czechitas"
+subtitle: "Brno - jaro 2024 - středa" 
 time: 18:00–20:00
 default_time:
   start: '18:00'
   end: '20:00'
 timezone: Europe/Prague
-#place: ...
+place: Fakulta Informatiky MUNI, Botanická 554/68a, místnost S505
 description: Kurz linuxové administrace
 long_description: |
     Na získání práce v IT je často potřeba něco víc než programování.
@@ -23,16 +23,13 @@ long_description: |
     Na procvičení doma budou i menší úkoly, tak s nimi počítej do svých
     časových možností.
 
-    Jde o druhý běh tohoto kurzu. Materiály pro něj teprve vznikají,
-    nebudou tedy bohužel k dispozici předem.
+    Jde o třetí běh tohoto kurzu. Materiály pro něj ještě vznikají,
+    některé části nebudou tedy bohužel k dispozici předem.
 
     Tento kurz je bez omezení OS, ale je nutné mít notebook s instalačními
     právy a 10+ GB místa na disku.
 
     Kurz je zdarma, ale kapacita je omezená. Je potřeba se registrovat.
-
-    Kvůli opatřením ohledně setkávání lidí můžou být záznamy z kurzu nahrávány
-    na Youtube. Jestli se to povede, tak i v přímém přenosu.
 
 vars:
   user-gender: f
